@@ -1,26 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function App() {
+import Footer from './components/footer/Footer';
+import Game from './game/Game';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='overflow-x-hidden'>
+      <BrowserRouter>
+        {/* <AppBar />
+        <FloatingButton /> */}
+        <div className=' w-screen min-h-screen mt-14'>
+          {/* <div className='fixed top-16 md:top-14 left-0 z-10 w-screen'>
+            <MarqueeHeader />
+          </div> */}
+          <Routes>
+            <Route path="/" element={<Game />}/>
+          </Routes>
+          <Footer />
+        </div>
+      </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;
