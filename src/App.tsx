@@ -7,7 +7,7 @@ import Game from './game/Game';
 const App = () => {
   return (
     <div className='overflow-x-hidden'>
-      <BrowserRouter basename='/Y23/game'>
+      <BrowserRouter basename="/Y23/game">
         {/* <AppBar />
         <FloatingButton /> */}
         <div className=' w-screen min-h-screen mt-14'>
